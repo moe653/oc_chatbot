@@ -4,7 +4,7 @@
 ## 使用技術
 - 記述予定
 ## ディレクトリ構成
-<pre>'''
+<pre>
 .
 ├── README.md
 └── temp
@@ -14,7 +14,7 @@
     │   ├── genre_questions.html
     │   └── index.html
     └── venv
-''' </pre>
+</pre>
 ### temp
 - Python3.12.3とFlask使用
 - ローカルホストでのみ稼働
