@@ -1,0 +1,38 @@
+    .body {
+    min-height: 100vh; /* ビューポートの高さ全体を使用 */
+    display: flex;
+    flex-direction: column; /* 子要素を縦に並べる */
+    align-items: center;   /* 子要素を水平方向の中央に配置 */
+    padding: 20px;         /* 全体的な余白 */
+    background: #fff;      /* 背景色 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* フォントの指定 */
+    color: #333;           /* 基本の文字色 */
+    box-sizing: border-box; /* paddingやborderをwidth/heightに含める */
+    }
+    .recButton {
+  height: 50px;
+  min-width: 150px;       /* ボタンの最小幅 */
+  max-width: 200px;       /* ボタンの最大幅 */
+  flex: 1;                /* .buttonGroup内で利用可能なスペースを均等に分配 */
+  font-size: 1.1em;       /* 文字の大きさ */
+  border: none;           /* 枠線なし */
+  border-radius: 30px;    /* 丸み */
+  color: #fff;            /* 文字の色 */
+  background: #4977c2;    /* 背景色 */
+  margin: 5px;            /* 上下左右の余白 (buttonGroupのgapと合わせて調整) */
+  cursor: pointer;        /* カーソル変更 */
+  transition: background 0.3s ease; /* ホバー効果を滑らかに */
+  box-sizing: border-box; /* paddingやborderを幅に含める */
+  display: flex;          /* ボタン内のテキストを中央に配置するため */
+  align-items: center;    /* 垂直方向中央 */
+  justify-content: center; /* 水平方向中央 */
+  text-decoration: none;  /* <a>タグの場合に下線を消す */
+}
+
+/*カーソルを合わせたとき */
+.recButton:hover {
+  background: #b7cdf3; /* ホバー時の背景色 */
+}
+
+
+
