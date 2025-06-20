@@ -8,7 +8,7 @@ function App() {
       <div className="App">
         <Routes>
         <Route path="/" element={<Home/>} /> {/* 初期表示で画面 */}
-        <Route path="/bottan" element={<Bottan/>} /> {/* 初期表示で画面 */}
+        <Route path="/bottan" element={<Bottan/>} /> {/* URLが/bottanの時に表示*/}
         </Routes>
       </div>
     </Router>
