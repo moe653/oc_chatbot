@@ -3,6 +3,8 @@
     display: flex;      /*Flexboxレイアウトを有効化*/
     flex-direction: column; /*子要素を縦方向に並べる*/
     padding: 20px;      /*全体の余白*/
+    padding-left: 30px;
+    padding-bottom: 60px;   /*入力欄＋余白分空ける*/
     box-sizing: border-box; /* paddingやborderをwidth/heightに含める */
     background: #c0c0c0;    /*背景色の設定*/
 }
@@ -29,7 +31,12 @@
 
 /*テキスト入力画面*/
 .sendArea {
+    position: fixed;
     display: flex;
+    bottom: 5px;
+    left: 20px;
+    right: 5px;
+    height: 40px;
     padding: 8px;
     border-top: 1px solid #ccc;
     background: #f8f8f8;
@@ -48,16 +55,14 @@
 
 /*吹き出し領域の設定*/
 .messageArea {
-    flex: 3;
+    flex-grow: 1;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 10px;
-    /* border-radius: 5%; */
+    padding: 30px;
     box-sizing: border-box;
     background-color: #fff;
-
     position: relative;     /*背景メッセージ用の絶対配置の基準にする*/
 }
 
