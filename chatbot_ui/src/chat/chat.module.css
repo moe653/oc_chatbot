@@ -1,0 +1,88 @@
+.body {
+    min-height: 100vh;  /*画面の高さ100%分を最低限の高さに*/
+    display: flex;      /*Flexboxレイアウトを有効化*/
+    flex-direction: column; /*子要素を縦方向に並べる*/
+    padding: 20px;      /*全体の余白*/
+    box-sizing: border-box; /* paddingやborderをwidth/heightに含める */
+    background: #c0c0c0;    /*背景色の設定*/
+}
+
+/*チャット開始前に画面に表示するメッセージを設定*/
+.backMessage {
+    position: absolute;
+    top: 50%;         /* 縦方向中央 */
+    left: 50%;        /* 横方向中央 */
+    transform: translate(-50%, -50%);  /* 完全に中央に */
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+    display: flex;
+    padding: 16px;
+    color: #c0c0c0;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: pre-line;  /* 改行を反映 */
+    width: 100%;            /* 横幅いっぱいに */
+    text-align: center;     /* テキスト中央寄せ */
+}
+
+/*テキスト入力画面*/
+.sendArea {
+    display: flex;
+    padding: 8px;
+    border-top: 1px solid #ccc;
+    background: #f8f8f8;
+}
+
+/*テキスト入力画面*/
+.sendArea input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 8px;
+}
+/*送信ボタン*/
+.sendButtaon {
+    padding: 8px 16px;
+}
+
+/*吹き出し領域の設定*/
+.messageArea {
+    flex: 3;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    /* border-radius: 5%; */
+    box-sizing: border-box;
+    background-color: #fff;
+
+    position: relative;     /*背景メッセージ用の絶対配置の基準にする*/
+}
+
+/*ユーザー側の吹き出し本体の設定*/
+.messageBubbleUser {
+    align-self: flex-end;            /* 右寄せ */
+    background-color: #7fffff;       /* LINE風の緑背景 */
+    border-radius: 16px 16px 0 16px; /* 丸みを帯びた右下吹き出し風 */
+    padding: 16px 20px;
+    max-width: 70%;
+    font-size: 18px;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    word-break: break-word;
+}
+
+/*bot側の吹き出し本体の設定*/
+.messageBubbleBot {
+    align-self: flex-start;            /* 右寄せ */
+    background-color: #f1f0f0;       /* LINE風の緑背景 */
+    border-radius: 16px 16px 16px 0; /* 丸みを帯びた右下吹き出し風 */
+    padding: 16px 20px;
+    max-width: 70%;
+    font-size: 18px;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    word-break: break-word;
+}
