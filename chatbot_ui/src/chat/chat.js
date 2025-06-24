@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './chat.module.css';
 
@@ -7,6 +7,13 @@ const Chat = () => {
     const [inputText, setInputText] = useState('');
     // 吹き出し用の配列
     const [messages, setMessages] = useState([]);
+    //最後のメッセージ位置を示すための参照を用意
+    const messageEnd = useRef(null);
+
+    //スクロールして一番下に移動する
+    useEffect(() => {
+        messageEnd.current?.scrollIntoView({ behavior: 'smooth'});
+    }, [messages]); //messagesが変わるたびにスクロール
 
     const sendMessage = async() => {
         //入力欄が空なら何もしない
@@ -24,7 +31,7 @@ const Chat = () => {
 
         /* try {
             //GASにリクエストを送信
-            const response = await fetch('https://script.google.com/a/macros/ugs.kochi-tech.ac.jp/s/AKfycby1MtoytEiE37yqewxUDM2sejlYfcsajmhUD-K1eEjvaft05hhnoKdS8T5aJeQLkq-qAw/exec', {
+            const response = await fetch('https://script.google.com/macros/s/AKfycbzjctL2qe8kUrTR3-zboqO9FJjywTHBnx5aNnWoGPHoYCfPvQF5hEfX6RatefRGvBCe-Q/exec', {
                 method: 'POST',
                 headers: { 'content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams({message: inputText}),
@@ -64,6 +71,8 @@ const Chat = () => {
                         {msg.text}  {/*オブジェクトのtextのみを表示*/}
                     </div>
                 ))}
+                {/* 目印となる空要素 */}
+                <div ref={messageEnd} />
             </div>
 
             {/* 入力欄 */}
@@ -81,6 +90,7 @@ const Chat = () => {
                     送信
                 </button>
             </div>
+
         </div>
     );
 };
