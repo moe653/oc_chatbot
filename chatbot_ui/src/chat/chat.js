@@ -26,12 +26,12 @@ const Chat = () => {
         // 入力欄を空に
         setInputText('');
         //入力に対して"こんにちは"と返答するようにした
-        const gasReply = "こんにちは"
-        setMessages(prev => [...prev, { text: gasReply, sender: 'bot'}]);
+        /* const gasReply = "こんにちは"
+        setMessages(prev => [...prev, { text: gasReply, sender: 'bot'}]); */
 
-        /* try {
+        try {
             //GASにリクエストを送信
-            const response = await fetch('https://script.google.com/macros/s/AKfycbzjctL2qe8kUrTR3-zboqO9FJjywTHBnx5aNnWoGPHoYCfPvQF5hEfX6RatefRGvBCe-Q/exec', {
+            const response = await fetch(process.env.REACT_APP_GAS_URL, {
                 method: 'POST',
                 headers: { 'content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams({message: inputText}),
@@ -45,7 +45,7 @@ const Chat = () => {
         } catch (error) {
             //エラー処理
             console.error('GAS通信エラー', error);
-        } */
+        }
     };
 
     return (
