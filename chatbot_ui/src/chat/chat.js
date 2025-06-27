@@ -50,6 +50,10 @@ const Chat = () => {
 
     return (
         <div className={styles.body}>
+            {/* ヘッダー */}
+            <div className={styles.header}>
+                Shikidalab
+            </div>
             {/* 背景メッセージ */}
             {/* 何も表示されていない場合に表示 */}
             {messages.length === 0 && (
@@ -61,19 +65,30 @@ const Chat = () => {
 
             {/* チャットエリア */}
             <div className={styles.messageArea}>
-                {messages.map((msg, index) => (
-                    <div
-                    key={index}
-                    className={
-                        msg.sender === 'bot' ? styles.messageBubbleBot : styles.messageBubbleUser
-                    }
-                    >
-                        {msg.text}  {/*オブジェクトのtextのみを表示*/}
+            {messages.map((msg, index) => (
+                msg.sender === 'bot' ? (
+                // Botの吹き出し＋アイコン（横並び）
+                <div key={index} className={styles.messageWrapperBot}>
+                    <img
+                    src="/fig/free_man.jpg"
+                    alt="Bot"
+                    className={styles.botIcon}
+                    />
+                    <div className={styles.messageBubbleBot}>
+                    {msg.text}
                     </div>
-                ))}
-                {/* 目印となる空要素 */}
-                <div ref={messageEnd} />
+                </div>
+                ) : (
+                // ユーザーの吹き出し（右寄せ）
+                <div key={index} className={styles.messageBubbleUser}>
+                    {msg.text}
+                </div>
+                )
+            ))}
+            {/* 目印となる空要素 */}
+            <div ref={messageEnd} />
             </div>
+
 
             {/* 入力欄 */}
             <div className={styles.sendArea}>
