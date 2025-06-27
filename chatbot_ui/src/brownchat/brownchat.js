@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './chat.module.css';
+import styles from './brownchat.module.css';
 
-const Chat = () => {
+const Brownchat = () => {
     // 入力欄の文字
     const [inputText, setInputText] = useState('');
     // 吹き出し用の配列
@@ -110,4 +110,4 @@ const Chat = () => {
     );
 };
 
-export default Chat;
+export default Brownchat;

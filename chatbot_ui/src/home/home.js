@@ -6,7 +6,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const chatButton = () => {
-        navigate('/chat');
+        navigate('/brownchat');
     };
 
     return (
