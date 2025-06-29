@@ -5,16 +5,16 @@ import styles from './home.module.css'
 const Home = () => {
     const navigate = useNavigate();
 
-    const chatButton = () => {
-        navigate('/brownchat');
+    const brownchatButton = () => {
+        navigate('/select');
     };
 
     return (
         <div className={styles.body}>
             敷田研チャットボット
             <button
-            className={styles.chatButton}
-            onClick={chatButton}
+            className={styles.brownchatButton}
+            onClick={brownchatButton}
             >
                 Start
             </button>

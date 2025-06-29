@@ -9,8 +9,8 @@
     color: #000;        /* 基本の文字色 */
     box-sizing: border-box; /* paddingやborderをwidth/heightに含める */
 }
-/*チャット画面に行くためのボタンの設定*/
-.chatButton {
+/*チャット画面(茶色)に行くためのボタンの設定*/
+.brownchatButton {
     height: 60px;   /*ボタンの縦幅*/
     min-width: 150px;   /* ボタンの最小幅 */
     max-width: 200px;   /* ボタンの最大幅 */
@@ -28,6 +28,6 @@
 }
 
 /*カーソルを合わせたとき*/
-.chatButton:hover {
+.brownchatButton:hover {
     background: #ffdab9;
 }

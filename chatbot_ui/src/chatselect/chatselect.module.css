@@ -1,0 +1,82 @@
+.body {
+    min-height: 100vh;  /*画面の高さ100%分を最低限の高さに*/
+    display: flex;      /*Flexboxレイアウトを有効化*/
+    flex-direction: column; /*子要素を縦方向に並べる*/
+    align-items: center;    /*子要素を水平方向に中央ぞろえ*/
+    justify-content: center;    /*子要素を垂直方向に中央ぞろえ*/
+    padding: 20px;      /*全体的な余白*/
+    background: #fff;   /* 背景色 */
+    color: #000;        /* 基本の文字色 */
+    box-sizing: border-box; /* paddingやborderをwidth/heightに含める */
+}
+
+/* ボタンの配置の設定 */
+.button {
+    display: flex;
+    flex-direction: row;
+}
+
+/*チャット画面(茶色)に行くためのボタンの設定*/
+.brownButton {
+    height: 60px;   /*ボタンの縦幅*/
+    min-width: 150px;   /* ボタンの最小幅 */
+    max-width: 200px;   /* ボタンの最大幅 */
+    /* flex: 1; */
+    border: none;       /*ボタンの枠線をなしに*/
+    background: #805505;    /* 背景色 */
+    /* margin: auto; */
+    cursor: pointer;    /*ボタンをカーソルに合わせたときに手の形に*/
+    /*transition: background 0.3s ease;*/
+    box-sizing: border-box; /* paddingやborderを幅に含める */
+    display: flex;      /* ボタン内のテキストを中央に配置するため */
+    align-items: center;    /* 垂直方向中央 */
+    justify-content: center;    /* 水平方向中央 */
+    border-radius: 20px;
+}
+
+/*カーソルを合わせたとき*/
+.brownButton:hover {
+    background: #e5d3b3;
+}
+
+.orangeButton {
+    height: 60px;   /*ボタンの縦幅*/
+    min-width: 150px;   /* ボタンの最小幅 */
+    max-width: 200px;   /* ボタンの最大幅 */
+    /* flex: 1; */
+    border: none;       /*ボタンの枠線をなしに*/
+    background: #fb8c00;    /* 背景色 */
+    /* margin: auto; */
+    cursor: pointer;    /*ボタンをカーソルに合わせたときに手の形に*/
+    /*transition: background 0.3s ease;*/
+    box-sizing: border-box; /* paddingやborderを幅に含める */
+    display: flex;      /* ボタン内のテキストを中央に配置するため */
+    align-items: center;    /* 垂直方向中央 */
+    justify-content: center;    /* 水平方向中央 */
+    border-radius: 20px;
+}
+
+.orangeButton:hover {
+    background: #fff3e0;
+}
+
+.blueButton {
+    height: 60px;   /*ボタンの縦幅*/
+    min-width: 150px;   /* ボタンの最小幅 */
+    max-width: 200px;   /* ボタンの最大幅 */
+    /* flex: 1; */
+    border: none;       /*ボタンの枠線をなしに*/
+    background: #1e88e5;    /* 背景色 */
+    /* margin: auto; */
+    cursor: pointer;    /*ボタンをカーソルに合わせたときに手の形に*/
+    /*transition: background 0.3s ease;*/
+    box-sizing: border-box; /* paddingやborderを幅に含める */
+    display: flex;      /* ボタン内のテキストを中央に配置するため */
+    align-items: center;    /* 垂直方向中央 */
+    justify-content: center;    /* 水平方向中央 */
+    border-radius: 20px;
+}
+
+.blueButton:hover {
+    background: #e3f2fd;
+}
