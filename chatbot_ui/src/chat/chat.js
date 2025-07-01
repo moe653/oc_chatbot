@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './chat.module.css';
 import classNames from 'classnames';
 
 const Chat = ({ theme }) => {
+    const navigate = useNavigate();
     // 入力欄の文字
     const [inputText, setInputText] = useState('');
     // 吹き出し用の配列
@@ -11,6 +13,11 @@ const Chat = ({ theme }) => {
     const messageEnd = useRef(null);
     //入力文字数の制限
     const MAX_LENGTH = 10;
+
+    // 戻るボタンの設置
+    const returnButton = () => {
+        navigate('/select')
+    }
 
     // メッセージが追加されるたびに一番下に移動
     useEffect(() => {
@@ -51,7 +58,16 @@ const Chat = ({ theme }) => {
         <div className={classNames(styles.body, styles[theme])}>
             {/* ヘッダー */}
             <div className={classNames(styles.header, styles[`${theme}Header`])}>
-                Shikidalab
+                <div className={styles.headerLeft}>
+                    Shikidalab
+                </div>
+                <div className={styles.headerRight}>
+                    <button
+                        onClick={returnButton}
+                        className={styles.backButton}>
+                            back
+                    </button>
+                </div>
             </div>
 
             {/* 背景メッセージ */}

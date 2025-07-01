@@ -24,6 +24,34 @@
     color: #ffffff;         /* 文字の色 */
 }
 
+.headerLeft,
+.headerRight {
+    flex: 1;
+    display: flex;  /*子要素をフレックボックスで並べる*/
+    align-items: center;
+}
+
+.headerLeft {
+    justify-content: flex-start;    /* 左寄せに */
+}
+
+.headerRight {
+    justify-content: flex-end;      /* 右寄せに */
+}
+
+/* 戻るボタンの設定 */
+.backButton {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.backButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 /* チャット開始前に画面に表示するメッセージを設定 */
 .backMessage {
     position: absolute;
