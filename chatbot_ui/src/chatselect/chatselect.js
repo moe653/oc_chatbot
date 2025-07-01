@@ -6,38 +6,52 @@ const Chatselect = () => {
     const navigate = useNavigate();
 
     const brownButton = () => {
-        navigate('/select/brownchat');
+        navigate('/select/brown');
     };
 
     const orangeButton = () => {
-        navigate('/select/orangechat')
+        navigate('/select/orange')
     }
 
     const blueButton = () => {
-        navigate('/select/bluechat')
+        navigate('/select/blue')
+    }
+
+    const greenButton = () => {
+        navigate('/select/green')
     }
 
     return (
         <div className={styles.body}>
             カラー選択
             <div className={styles.button}>
-                <button
+                {/* 茶色 */}
+                {/* <button
                 className={styles.brownButton}
                 onClick={brownButton}
                 >
                     brown
-                </button>
+                </button> */}
+                {/* オレンジ */}
                 <button
                 className={styles.orangeButton}
                 onClick={orangeButton}
                 >
                     orange
                 </button>
+                {/* 青色 */}
                 <button
                 className={styles.blueButton}
                 onClick={blueButton}
                 >
                     blue
+                </button>
+                {/* 緑色 */}
+                <button
+                className={styles.greenButton}
+                onClick={greenButton}
+                >
+                    green
                 </button>
             </div>
         </div>

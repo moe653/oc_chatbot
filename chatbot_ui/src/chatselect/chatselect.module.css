@@ -14,6 +14,7 @@
 .button {
     display: flex;
     flex-direction: row;
+    gap: 10px;      /* ボタン同士の隙間を空ける */
 }
 
 /*チャット画面(茶色)に行くためのボタンの設定*/
@@ -79,4 +80,25 @@
 
 .blueButton:hover {
     background: #e3f2fd;
+}
+
+.greenButton {
+    height: 60px;   /*ボタンの縦幅*/
+    min-width: 150px;   /* ボタンの最小幅 */
+    max-width: 200px;   /* ボタンの最大幅 */
+    /* flex: 1; */
+    border: none;       /*ボタンの枠線をなしに*/
+    background: #66bb6a;    /* 背景色 */
+    /* margin: auto; */
+    cursor: pointer;    /*ボタンをカーソルに合わせたときに手の形に*/
+    /*transition: background 0.3s ease;*/
+    box-sizing: border-box; /* paddingやborderを幅に含める */
+    display: flex;      /* ボタン内のテキストを中央に配置するため */
+    align-items: center;    /* 垂直方向中央 */
+    justify-content: center;    /* 水平方向中央 */
+    border-radius: 20px;
+}
+
+.greenButton:hover {
+    background: #a5d6a7;
 }

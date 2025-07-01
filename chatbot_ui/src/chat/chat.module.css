@@ -1,0 +1,186 @@
+/* 共通部分 */
+.body {
+    min-height: 100vh;  /*画面の高さ100%分を最低限の高さに*/
+    display: flex;      /*Flexboxレイアウトを有効化*/
+    flex-direction: column; /*子要素を縦方向に並べる*/
+    padding: 20px;      /*全体の余白*/
+    padding-bottom: 70px;   /*入力欄50＋余白20分空ける*/
+    padding-top: 70px;      /* ヘッダーの分あける */
+    box-sizing: border-box; /* paddingやborderをwidth/heightに含める */
+}
+
+/* ヘッダーの設定 */
+.header {
+    position: fixed;    /*画面上の特定の位置に固定*/
+    display: flex;      /*子要素をフレックボックスで並べる*/
+    top: 10px;       /*画面下から10px上に表示*/
+    left: 20px;         /*画面左から10px上に表示*/
+    right: 20px;        /*画面右から10px上に表示*/
+    height: 50px;       /*入力エリアの高さを40pxに固定*/
+    padding: 8px;       /*要素の内部に8pxの余白を持たせる*/
+    box-sizing: border-box;     /* paddingやborderをwidth/heightに含める */
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+    color: #ffffff;         /* 文字の色 */
+}
+
+/* チャット開始前に画面に表示するメッセージを設定 */
+.backMessage {
+    position: absolute;
+    top: 50%;         /* 縦方向中央 */
+    left: 50%;        /* 横方向中央 */
+    transform: translate(-50%, -50%);  /* 完全に中央に */
+    user-select: none;  /* ユーザーが選択できないようにする */
+    pointer-events: none;
+    z-index: 1;         /* 最前面に */
+    display: flex;
+    padding: 16px;
+    color: #c0c0c0;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: pre-line;  /* 改行を反映 */
+    width: 100%;            /* 横幅いっぱいに */
+    text-align: center;     /* テキスト中央寄せ */
+}
+
+/* テキスト入力画面 */
+.sendArea {
+    position: fixed;    /*画面上の特定の位置に固定*/
+    display: flex;      /*子要素をフレックボックスで並べる*/
+    bottom: 10px;       /*画面下から10px上に表示*/
+    left: 20px;         /*画面左から10px上に表示*/
+    right: 20px;        /*画面右から10px上に表示*/
+    height: 50px;       /*入力エリアの高さを40pxに固定*/
+    padding: 8px;       /*要素の内部に8pxの余白を持たせる*/
+    box-sizing: border-box;     /* paddingやborderをwidth/heightに含める */
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+}
+
+.sendArea input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 8px;
+}
+
+/* 送信ボタン */
+.sendButton {
+    padding: 6px;
+    cursor: pointer;    /*ボタンをカーソルに合わせたときに手の形に*/
+}
+
+/*吹き出し領域の設定*/
+.messageArea {
+    height: calc(100vh - 140px);     /* 領域の高さを固定し領域内でスクロールするように */
+    flex-grow: 1;
+    overflow-y: auto;       /* 縦スクロールを許可 */
+    display: flex;          /* 中の吹き出しを縦に並べるための設定 */
+    flex-direction: column; /* 中の吹き出しを縦に並べるための設定 */
+    gap: 8px;               /* 吹き出し同士の間隔を指定 */
+    padding: 30px;          /* 内側に余白を30px取る */
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;     /*背景メッセージ用の絶対配置の基準にする*/
+}
+
+/*ユーザー側の吹き出し本体の設定*/
+.messageBubbleUser {
+    align-self: flex-end;            /* 右寄せ */
+    border-radius: 16px 16px 0 16px; /* 丸みを帯びた右下吹き出し風 */
+    padding: 16px 20px;
+    max-width: 70%;
+    font-size: 18px;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    word-break: break-word;
+}
+
+/*bot側の吹き出し本体の設定*/
+.messageBubbleBot {
+    align-self: flex-start;            /* 左寄せ */
+    border-radius: 16px 16px 16px 0; /* 丸みを帯びた右下吹き出し風 */
+    padding: 16px 20px;
+    max-width: 70%;
+    font-size: 18px;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    word-break: break-word;
+}
+
+/*bot側のアイコンの設定*/
+.botIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* botの吹き出しとアイコンを横に並べる */
+.messageWrapperBot {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+/* 残りの文字数の表示 */
+.charCount {
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+}
+
+/* Orangeテーマ */
+.orange {
+    background: #fff3e0;
+}
+
+.orangeHeader {
+    background: #fb8c00;
+}
+
+.orangeSend {
+    background: #ffe0b2;
+}
+
+.orangeUser {
+    background-color: #ffcc80;
+}
+
+.orangeBot {
+    background-color: #ffe0b2;
+}
+
+/* Blueテーマ */
+.blue {
+    background: #e3f2fd;
+}
+.blueHeader {
+    background: #42a5f5;
+}
+.blueSend {
+    background: #bbdefb;
+}
+.blueUser {
+    background-color: #90caf9;
+}
+.blueBot {
+    background-color: #e3f2fd;
+}
+
+/* Greenテーマ */
+.green {
+    background: #e8f5e9;
+}
+.greenHeader {
+    background: #66bb6a;
+}
+.greenSend {
+    background: #c8e6c9;
+}
+.greenUser {
+    background-color: #a5d6a7;
+}
+.greenBot {
+    background-color: #e8f5e9;
+}
