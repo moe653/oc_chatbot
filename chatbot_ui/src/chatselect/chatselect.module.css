@@ -25,6 +25,7 @@
     /* flex: 1; */
     border: none;       /*ボタンの枠線をなしに*/
     background: #805505;    /* 背景色 */
+    color: white;
     /* margin: auto; */
     cursor: pointer;    /*ボタンをカーソルに合わせたときに手の形に*/
     /*transition: background 0.3s ease;*/
@@ -47,6 +48,7 @@
     /* flex: 1; */
     border: none;       /*ボタンの枠線をなしに*/
     background: #fb8c00;    /* 背景色 */
+    color: white;
     /* margin: auto; */
     cursor: pointer;    /*ボタンをカーソルに合わせたときに手の形に*/
     /*transition: background 0.3s ease;*/
@@ -68,6 +70,7 @@
     /* flex: 1; */
     border: none;       /*ボタンの枠線をなしに*/
     background: #1e88e5;    /* 背景色 */
+    color: white;
     /* margin: auto; */
     cursor: pointer;    /*ボタンをカーソルに合わせたときに手の形に*/
     /*transition: background 0.3s ease;*/
@@ -89,6 +92,7 @@
     /* flex: 1; */
     border: none;       /*ボタンの枠線をなしに*/
     background: #66bb6a;    /* 背景色 */
+    color: white;
     /* margin: auto; */
     cursor: pointer;    /*ボタンをカーソルに合わせたときに手の形に*/
     /*transition: background 0.3s ease;*/
