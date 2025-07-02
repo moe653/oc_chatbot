@@ -1,4 +1,3 @@
-/* 共通部分 */
 .body {
     min-height: 100vh;  /*画面の高さ100%分を最低限の高さに*/
     display: flex;      /*Flexboxレイアウトを有効化*/
@@ -7,6 +6,7 @@
     padding-bottom: 70px;   /*入力欄50＋余白20分空ける*/
     padding-top: 70px;      /* ヘッダーの分あける */
     box-sizing: border-box; /* paddingやborderをwidth/heightに含める */
+    background: #fff3e0;    /*背景色の設定*/
 }
 
 /* ヘッダーの設定 */
@@ -21,46 +21,19 @@
     box-sizing: border-box;     /* paddingやborderをwidth/heightに含める */
     overflow-y: auto;
     border-top: 1px solid #ccc;
+    background: #fb8c00;    /* 背景色 */
     color: #ffffff;         /* 文字の色 */
 }
 
-.headerLeft,
-.headerRight {
-    flex: 1;
-    display: flex;  /*子要素をフレックボックスで並べる*/
-    align-items: center;
-}
-
-.headerLeft {
-    justify-content: flex-start;    /* 左寄せに */
-}
-
-.headerRight {
-    justify-content: flex-end;      /* 右寄せに */
-}
-
-/* 戻るボタンの設定 */
-.backButton {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
-    font-size: 16px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-.backButton:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* チャット開始前に画面に表示するメッセージを設定 */
+/*チャット開始前に画面に表示するメッセージを設定*/
 .backMessage {
     position: absolute;
     top: 50%;         /* 縦方向中央 */
     left: 50%;        /* 横方向中央 */
     transform: translate(-50%, -50%);  /* 完全に中央に */
-    user-select: none;  /* ユーザーが選択できないようにする */
+    user-select: none;
     pointer-events: none;
-    z-index: 1;         /* 最前面に */
+    z-index: 1;
     display: flex;
     padding: 16px;
     color: #c0c0c0;
@@ -72,7 +45,7 @@
     text-align: center;     /* テキスト中央寄せ */
 }
 
-/* テキスト入力画面 */
+/*テキスト入力画面*/
 .sendArea {
     position: fixed;    /*画面上の特定の位置に固定*/
     display: flex;      /*子要素をフレックボックスで並べる*/
@@ -84,16 +57,17 @@
     box-sizing: border-box;     /* paddingやborderをwidth/heightに含める */
     overflow-y: auto;
     border-top: 1px solid #ccc;
+    background: #ffe0b2;
 }
 
+/*テキスト入力画面*/
 .sendArea input {
     flex: 1;
     padding: 8px;
     margin-right: 8px;
 }
-
-/* 送信ボタン */
-.sendButton {
+/*送信ボタン*/
+.sendButtan {
     padding: 6px;
     cursor: pointer;    /*ボタンをカーソルに合わせたときに手の形に*/
 }
@@ -115,6 +89,7 @@
 /*ユーザー側の吹き出し本体の設定*/
 .messageBubbleUser {
     align-self: flex-end;            /* 右寄せ */
+    background-color: #ffcc80;       /* 吹き出しの色背景 */
     border-radius: 16px 16px 0 16px; /* 丸みを帯びた右下吹き出し風 */
     padding: 16px 20px;
     max-width: 70%;
@@ -127,6 +102,7 @@
 /*bot側の吹き出し本体の設定*/
 .messageBubbleBot {
     align-self: flex-start;            /* 左寄せ */
+    background-color: #ffe0b2;       /* 吹き出しの色 */
     border-radius: 16px 16px 16px 0; /* 丸みを帯びた右下吹き出し風 */
     padding: 16px 20px;
     max-width: 70%;
@@ -149,66 +125,4 @@
     display: flex;
     align-items: flex-start;
     gap: 8px;
-}
-
-/* 残りの文字数の表示 */
-.charCount {
-    font-size: 10px;
-    color: #888;
-    text-align: right;
-}
-
-/* Orangeテーマ */
-.orange {
-    background: #fff3e0;
-}
-
-.orangeHeader {
-    background: #fb8c00;
-}
-
-.orangeSend {
-    background: #ffe0b2;
-}
-
-.orangeUser {
-    background-color: #ffcc80;
-}
-
-.orangeBot {
-    background-color: #ffe0b2;
-}
-
-/* Blueテーマ */
-.blue {
-    background: #e3f2fd;
-}
-.blueHeader {
-    background: #42a5f5;
-}
-.blueSend {
-    background: #bbdefb;
-}
-.blueUser {
-    background-color: #90caf9;
-}
-.blueBot {
-    background-color: #e3f2fd;
-}
-
-/* Greenテーマ */
-.green {
-    background: #e8f5e9;
-}
-.greenHeader {
-    background: #66bb6a;
-}
-.greenSend {
-    background: #c8e6c9;
-}
-.greenUser {
-    background-color: #a5d6a7;
-}
-.greenBot {
-    background-color: #e8f5e9;
 }
