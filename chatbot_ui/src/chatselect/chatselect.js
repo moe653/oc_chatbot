@@ -23,7 +23,7 @@ const Chatselect = () => {
 
     return (
         <div className={styles.body}>
-            カラー選択
+            分野選択
             <div className={styles.button}>
                 {/* 茶色 */}
                 {/* <button
@@ -37,21 +37,21 @@ const Chatselect = () => {
                 className={styles.orangeButton}
                 onClick={orangeButton}
                 >
-                    orange
+                    Communication
                 </button>
                 {/* 青色 */}
                 <button
                 className={styles.blueButton}
                 onClick={blueButton}
                 >
-                    blue
+                    Medical
                 </button>
                 {/* 緑色 */}
                 <button
                 className={styles.greenButton}
                 onClick={greenButton}
                 >
-                    green
+                    Security
                 </button>
             </div>
         </div>
