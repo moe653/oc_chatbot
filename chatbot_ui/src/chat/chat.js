@@ -12,7 +12,7 @@ const Chat = ({ theme }) => {
     //最後のメッセージ位置を示すための参照を用意
     const messageEnd = useRef(null);
     //入力文字数の制限
-    const MAX_LENGTH = 10;
+    const MAX_LENGTH = 200;
 
     // 戻るボタンの設置
     const returnButton = () => {
