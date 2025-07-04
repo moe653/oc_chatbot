@@ -86,7 +86,7 @@ const Chat = ({ theme }) => {
                         // Botの吹き出し＋アイコン(横並び)
                         <div key={index} className={styles.messageWrapperBot}>
                             <img
-                            src="/fig/free_man.jpg"
+                            src="/fig/Shikida_lab_logo.png"
                             alt="Bot"
                             className={styles.botIcon}
                             />
