@@ -9,7 +9,7 @@ import requests
 app = Flask(__name__)
 
 # --- モデルとインデックスロード ---
-model = SentenceTransformer("gemini-1.5-flash")
+model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 index = faiss.read_index("api/index.faiss")
 
 # チャンクのメタ情報（ID, ファイル名, テキストなど）
@@ -51,6 +51,7 @@ def rag_answer():
 {context}
     """
 
+    print("受け取った質問: ", question)
     try:
         res = requests.post(
             GEMINI_URL,

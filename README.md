@@ -7,12 +7,24 @@
 <pre>
 .
 ├── README.md
+├── chatbot_ui
+│   ├── README.md
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   └── src
+├── react_practice
+│   ├── README.md
+│   ├── node_modules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   └── src
 └── temp
     ├── app.py
     ├── lab_info.csv
     ├── templates
-    │   ├── genre_questions.html
-    │   └── index.html
     └── venv
 </pre>
 ### temp
