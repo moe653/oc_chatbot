@@ -1,0 +1,29 @@
+# Python仮想環境
+venv/
+ragenv/
+__pycache__/
+*.pyc
+
+# 環境設定ファイル（手動でVercelに設定する）
+.env
+.env.*
+
+# Vercelのローカル設定（CLIなどを使った場合）
+.vercel/
+
+# VS Code関連
+.vscode/
+
+# OSごとの不要ファイル
+.DS_Store
+Thumbs.db
+
+# FAISSインデックス（容量が大きいため）
+*.faiss
+
+# 一時生成ファイルやキャッシュ
+*.log
+*.tmp
+
+# Jupyter notebookチェックポイント
+.ipynb_checkpoints/
