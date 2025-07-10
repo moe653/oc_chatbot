@@ -36,3 +36,5 @@ api/documents.json
 .env
 venv/
 *.sqlite3
+
+data/
