@@ -27,3 +27,12 @@ Thumbs.db
 
 # Jupyter notebookチェックポイント
 .ipynb_checkpoints/
+
+# FAISSファイル・データ
+api/index.faiss
+api/documents.json
+
+# 環境設定
+.env
+venv/
+*.sqlite3
