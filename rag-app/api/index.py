@@ -84,3 +84,7 @@ def rag_answer():
         reply = f"Gemini APIへの接続に失敗しました。エラー: {str(e)}"
 
     return jsonify({ "reply": reply })
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
