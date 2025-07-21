@@ -30,24 +30,50 @@ const Chat = ({ theme }) => {
 
         //ユーザー側のメッセージを追加
         const userMessage = { text : inputText, sender: 'user'};
+        //チャットからの返答を待っている際のメッセージ
+        const thinkingMessage = { text: '考え中...', sender: 'bot'};
         // 配列に追加
-        setMessages(prev => [...prev, userMessage]);
+        setMessages(prev => [...prev, userMessage, thinkingMessage]);
         // 入力欄を空に
         setInputText('');
+
+        //画面の色に応じて分野をGASに送信できるようにする
+        let category;
+        if (theme === 'orange') {
+            category = 'security';
+        } else if (theme === 'blue') {
+            category = 'medical';
+        } else if (theme === 'green') {
+            category = 'communication';
+        } else {
+            category = 'error';
+        }
 
         try {
             //GASにリクエストを送信
             const response = await fetch(process.env.REACT_APP_GAS_URL, {
                 method: 'POST',
                 headers: { 'content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams({message: inputText}),
+                body: new URLSearchParams({
+                    message: inputText,
+                    category: category
+                }),
             });
 
             //GASからのレスポンスをテキストで取得
             const gasReply = await response.text();
 
-            //ボット側からのメッセージを追加
-            setMessages(prev => [...prev, { text: gasReply, sender: 'bot'}]);
+            //考え中を上書きする
+            //setMessages(prev => [...prev, { text: gasReply, sender: 'bot'}]);
+            setMessages(prev => {
+                const updated = [...prev];
+                //最新のbotメッセージを探す
+                const lastIndex = updated.length - 1;
+                if (updated[lastIndex]?.sender === 'bot') {
+                    updated[lastIndex] = { text: gasReply, sender: 'bot'};
+                }
+                return updated;
+            });
         } catch (error) {
             //エラー処理
             console.error('GAS通信エラー', error);
