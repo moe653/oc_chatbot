@@ -10,20 +10,23 @@ const Chatselect = () => {
     };
 
     const orangeButton = () => {
-        navigate('/select/orange')
+        navigate('/orange')
     }
 
     const blueButton = () => {
-        navigate('/select/blue')
+        navigate('/blue')
     }
 
     const greenButton = () => {
-        navigate('/select/green')
+        navigate('/green')
     }
 
     return (
-        <div className={styles.body}>
-            分野選択
+        <div className={styles.body} style={{ whiteSpace: 'pre-line'}}>
+            <p className={styles.title}>チャットボットに自由に質問してみよう！</p>
+            <p className={styles.subtitle}>
+            聞きたい分野にあったボタンを押してポスターのことを聞いてみてね
+            </p>
             <div className={styles.button}>
                 {/* 茶色 */}
                 {/* <button

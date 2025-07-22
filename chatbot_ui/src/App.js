@@ -8,11 +8,11 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home/>}></Route>  {/*初期画面で表示*/}
-          <Route path="/select" element={<Chatselect/>}></Route>  {/* チャットの色を選択 */}
-          <Route path="/select/orange" element={<Chat theme="orange" />} />
-          <Route path="/select/blue" element={<Chat theme="blue" />} />
-          <Route path="/select/green" element={<Chat theme="green" />} />
+          {/* <Route path="/" element={<Home/>}></Route>   */}
+          <Route path="/" element={<Chatselect/>}></Route>  {/* チャットの色を選択 */}
+          <Route path="/orange" element={<Chat theme="orange" />} />
+          <Route path="/blue" element={<Chat theme="blue" />} />
+          <Route path="/green" element={<Chat theme="green" />} />
         </Routes>
       </div>
     </Router>
