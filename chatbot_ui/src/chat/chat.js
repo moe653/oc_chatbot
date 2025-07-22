@@ -16,7 +16,7 @@ const Chat = ({ theme }) => {
 
     // 戻るボタンの設置
     const returnButton = () => {
-        navigate('/select')
+        navigate('/')
     }
 
     // メッセージが追加されるたびに一番下に移動
