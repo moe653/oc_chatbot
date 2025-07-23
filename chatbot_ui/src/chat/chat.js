@@ -31,7 +31,7 @@ const Chat = ({ theme }) => {
         //ユーザー側のメッセージを追加
         const userMessage = { text : inputText, sender: 'user'};
         //チャットからの返答を待っている際のメッセージ
-        const thinkingMessage = { text: '考え中...', sender: 'bot'};
+        const thinkingMessage = { text: '考え中...(残り10秒)', sender: 'bot'};
         // 配列に追加
         setMessages(prev => [...prev, userMessage, thinkingMessage]);
         // 入力欄を空に
