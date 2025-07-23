@@ -40,11 +40,11 @@ const Chat = ({ theme }) => {
         //画面の色に応じて分野をGASに送信できるようにする
         let category;
         if (theme === 'orange') {
-            category = 'security';
+            category = 'communication';
         } else if (theme === 'blue') {
             category = 'medical';
         } else if (theme === 'green') {
-            category = 'communication';
+            category = 'security';
         } else {
             category = 'error';
         }
