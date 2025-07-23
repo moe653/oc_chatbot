@@ -31,7 +31,7 @@ const Chat = ({ theme }) => {
         //ユーザー側のメッセージを追加
         const userMessage = { text : inputText, sender: 'user'};
         //チャットからの返答を待っている際のメッセージ
-        const thinkingMessage = { text: '考え中...', sender: 'bot'};
+        const thinkingMessage = { text: '考え中...(残り10秒)', sender: 'bot'};
         // 配列に追加
         setMessages(prev => [...prev, userMessage, thinkingMessage]);
         // 入力欄を空に
@@ -40,11 +40,11 @@ const Chat = ({ theme }) => {
         //画面の色に応じて分野をGASに送信できるようにする
         let category;
         if (theme === 'orange') {
-            category = 'security';
+            category = 'communication';
         } else if (theme === 'blue') {
             category = 'medical';
         } else if (theme === 'green') {
-            category = 'communication';
+            category = 'security';
         } else {
             category = 'error';
         }
