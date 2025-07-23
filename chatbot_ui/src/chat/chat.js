@@ -14,6 +14,7 @@ const Chat = ({ theme }) => {
     //入力文字数の制限
     const MAX_LENGTH = 200;
 
+    const [isCpmposing, setIsComposing] = useState(false);
     // 戻るボタンの設置
     const returnButton = () => {
         navigate('/')
@@ -140,7 +141,7 @@ const Chat = ({ theme }) => {
                     maxLength={MAX_LENGTH}
                     onChange={(e) => setInputText(e.target.value)}
                     onKeyDown={(e) => {
-                        if (e.key === 'Enter') sendMessage();
+                        if (e.key === 'Enter' && !isComposing) sendMessage();
                     }}
                 />
                 <button className={styles.sendButton} onClick={sendMessage}>
