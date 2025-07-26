@@ -10,9 +10,9 @@ function App() {
         <Routes>
           {/* <Route path="/" element={<Home/>}></Route>   */}
           <Route path="/" element={<Chatselect/>}></Route>  {/* チャットの色を選択 */}
-          <Route path="/orange" element={<Chat theme="orange" />} />
-          <Route path="/blue" element={<Chat theme="blue" />} />
-          <Route path="/green" element={<Chat theme="green" />} />
+          <Route path="/communication" element={<Chat theme="orange" />} />
+          <Route path="/medical" element={<Chat theme="blue" />} />
+          <Route path="/security" element={<Chat theme="green" />} />
         </Routes>
       </div>
     </Router>

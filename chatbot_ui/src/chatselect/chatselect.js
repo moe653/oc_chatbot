@@ -10,15 +10,15 @@ const Chatselect = () => {
     };
 
     const orangeButton = () => {
-        navigate('/orange')
+        navigate('/communication')
     }
 
     const blueButton = () => {
-        navigate('/blue')
+        navigate('/medical')
     }
 
     const greenButton = () => {
-        navigate('/green')
+        navigate('/security')
     }
 
     return (
