@@ -81,6 +81,33 @@ const Chat = ({ theme }) => {
         }
     };
 
+    //ポスターを見るボタンの設定
+    const posterPageButton = () => {
+        if (theme === 'orange') {
+            navigate('/communication/poster');
+        } else if (theme === 'green') {
+            navigate('/security/poster');
+        } else if (theme === 'blue') {
+            navigate('/medical/poster');
+        }
+    };
+
+    //背景メッセージ
+    const backMessages = {
+        orange: `チャットボットに質問してみよう！
+            質問例
+            どんな研究をしてるの?
+            オンラインコミュニケーションの課題は?`,
+        blue: `チャットボットに質問してみよう！
+            質問例
+            どんな研究をしてるの？
+            骨格推定って何?`,
+        green: `チャットボットに質問してみよう！
+            質問例
+            どんな研究をしてるの?
+            ナッジってなに?`,
+    };
+
     return (
         <div className={classNames(styles.body, styles[theme])}>
             {/* ヘッダー */}
@@ -89,6 +116,12 @@ const Chat = ({ theme }) => {
                     Shikidalab
                 </div>
                 <div className={styles.headerRight}>
+                    <button
+                        onClick={posterPageButton}
+                        className={styles.posterButton}
+                    >
+                        ポスターはこちら
+                    </button>
                     <button
                         onClick={returnButton}
                         className={styles.backButton}>
@@ -101,8 +134,7 @@ const Chat = ({ theme }) => {
             {/* 何もメッセージがない場合に表示 */}
             {messages.length === 0 && (
                 <div className={styles.backMessage} style={{ whiteSpace: 'pre-line'}}>
-                    チャットボットに質問してみよう！ {"\n"}
-                    質問例
+                    {backMessages[theme] || 'チャットボットに質問してみよう!'}
                 </div>
             )}
 
