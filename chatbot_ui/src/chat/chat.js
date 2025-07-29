@@ -86,7 +86,7 @@ const Chat = ({ theme }) => {
         if (theme === 'orange') {
             navigate('/communication/poster');
         } else if (theme === 'green') {
-            navigate('security');
+            navigate('/security/poster');
         } else if (theme === 'blue') {
             navigate('/medical/poster');
         }

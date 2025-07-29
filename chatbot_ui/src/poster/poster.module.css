@@ -1,5 +1,6 @@
 .body {
-    padding: 1rem;
+    position: relative;
+    padding-top: 3rem;
 }
 
 /* ポスターの設定 */
@@ -13,4 +14,23 @@
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* 戻るボタンの設置 */
+.backButton {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #ffffffcc;
+    border: 1px solid #aaa;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.2s ease;
+}
+.backButton:hover {
+    background-color: #eee;
 }
