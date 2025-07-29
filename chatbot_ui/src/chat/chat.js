@@ -81,6 +81,17 @@ const Chat = ({ theme }) => {
         }
     };
 
+    //ポスターを見るボタンの設定
+    const posterPageButton = () => {
+        if (theme === 'orange') {
+            navigate('/communication/poster');
+        } else if (theme === 'green') {
+            navigate('security');
+        } else if (theme === 'blue') {
+            navigate('/medical/poster');
+        }
+    };
+
     return (
         <div className={classNames(styles.body, styles[theme])}>
             {/* ヘッダー */}
@@ -89,6 +100,12 @@ const Chat = ({ theme }) => {
                     Shikidalab
                 </div>
                 <div className={styles.headerRight}>
+                    <button
+                        onClick={posterPageButton}
+                        className={styles.posterButton}
+                    >
+                        ポスターはこちら
+                    </button>
                     <button
                         onClick={returnButton}
                         className={styles.backButton}>
@@ -152,45 +169,6 @@ const Chat = ({ theme }) => {
                 <div className={styles.charCount} style={{ whiteSpace: 'pre-line'}}>
                     残り {"\n"}{MAX_LENGTH - inputText.length} 文字
                 </div>
-            </div>
-
-            {/* ポスター */}
-            <div className={styles.posterArea}>
-                {theme === 'green' && (
-                    <img
-                        src="/fig/poster_security.png"
-                        alt="ポスター"
-                        className={styles.posterImage}
-                    />
-                )}
-                {theme === 'blue' && (
-                    <>
-                        <img
-                            src="/fig/poster_medical_chatbot.png"
-                            alt="医療ポスター1"
-                            className={styles.posterImage}
-                        />
-                        <img
-                            src="/fig/poster_medical_kokkaku.png"
-                            alt="医療ポスター2"
-                            className={styles.posterImage}
-                        />
-                    </>
-                )}
-                {theme === 'orange' && (
-                    <>
-                        <img
-                            src="/fig/poster_communication_2024.png"
-                            alt="コミュニケーションポスター2024"
-                            className={styles.posterImage}
-                        />
-                        <img
-                            src="/fig/poster_communication_2023.png"
-                            alt="コミュニケーションポスター2023"
-                            className={styles.posterImage}
-                        />
-                    </>
-                )}
             </div>
         </div>
     );

@@ -1,0 +1,16 @@
+.body {
+    padding: 1rem;
+}
+
+/* ポスターの設定 */
+.posterArea {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.posterImage {
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}

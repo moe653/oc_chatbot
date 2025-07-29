@@ -173,6 +173,19 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* ポスターを見るボタンの設定 */
+.posterButton {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.posterButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 /* Orangeテーマ */
 .orange {
     background: #fff3e0;
