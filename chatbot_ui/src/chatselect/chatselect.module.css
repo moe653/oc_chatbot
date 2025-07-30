@@ -22,17 +22,19 @@
     white-space: pre-line;
 }
 
-/* ボタンの配置の設定 */
 .button {
     display: flex;
-    flex-direction: row;
-    gap: 10px;      /* ボタン同士の隙間を空ける */
-    @media screen and (max-width: 768px) {
-        .button {
-            flex-direction: column;
-        }
+    flex-direction: column;
+    gap: 10px; /* ボタン同士の隙間 */
+}
+
+/* 画面幅が768px以下のときは縦並びに変更 */
+@media screen and (max-width: 768px) {
+    .button {
+        flex-direction: row;
     }
 }
+
 
 /*チャット画面(茶色)に行くためのボタンの設定*/
 .brownButton {
