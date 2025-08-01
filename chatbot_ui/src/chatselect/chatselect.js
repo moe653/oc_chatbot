@@ -28,13 +28,6 @@ const Chatselect = () => {
             聞きたい分野にあったボタンを押してポスターのことを聞いてみてね
             </p>
             <div className={styles.button}>
-                {/* 茶色 */}
-                {/* <button
-                className={styles.brownButton}
-                onClick={brownButton}
-                >
-                    brown
-                </button> */}
                 {/* オレンジ */}
                 <button
                 className={styles.orangeButton}

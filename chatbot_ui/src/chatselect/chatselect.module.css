@@ -28,7 +28,7 @@
     gap: 10px; /* ボタン同士の隙間 */
 }
 
-/* 画面幅が768px以下のときは縦並びに変更 */
+/* 画面幅が500px以下のときは縦並びに変更 */
 @media screen and (max-width: 500px) {
     .button {
         flex-direction: column;
