@@ -5,10 +5,6 @@ import styles from './chatselect.module.css'
 const Chatselect = () => {
     const navigate = useNavigate();
 
-    const brownButton = () => {
-        navigate('/select/brown');
-    };
-
     const orangeButton = () => {
         navigate('/communication')
     }
